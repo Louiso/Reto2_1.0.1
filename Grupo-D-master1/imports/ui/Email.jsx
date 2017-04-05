@@ -7,7 +7,7 @@ export default class Email extends React.Component{
 
   render(){
     return(
-      <h1>Le hemos enviando un correo de racuperacion de contraseña</h1>
+      <h1>Le hemos enviando un correo de recuperacion de contraseña</h1>
     );
   }
 }

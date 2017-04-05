@@ -22,10 +22,11 @@ export default class Registro extends React.Component{
         email:email,
       });
       // Accounts.sendVerificationEmail(Meteor.userId(),email);
+      // Meteor.call('enviarEmail',email);
       FlowRouter.go(`/${username}`);
     }else{
       this.setState({
-        error:'Que le pasa boludo'
+        error:'algun casillero esta vacio',
       });
     }
   }

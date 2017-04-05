@@ -21,7 +21,7 @@ export default class Login extends React.Component {
             Meteor.loginWithPassword(username, password,(err)=>{
               if(err){
                 this.setState({
-                  mensaje:'No seas mamon!!!',
+                  mensaje:'username or password is incorrect!!!',
                 });
               }else{
                 FlowRouter.go(`/${username}`);
@@ -30,10 +30,10 @@ export default class Login extends React.Component {
 
         } else {
           this.setState({
-            mensaje:'No seas mamon!!!',
+            mensaje:'Informacion incompleta!!!',
           });
 
-        }
+      }
     }
     changeRegister() {
         FlowRouter.go('/Registro');

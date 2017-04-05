@@ -48,24 +48,26 @@ FlowRouter.route('/Registro',{
     });
   }
 });
-FlowRouter.route('/:id',{
-  action(){
-    mount(layoutCuenta,{
-      content:(<Home/>)
-    });
-  }
-});
-FlowRouter.route('/ResetPassword/:token',{
-  action(){
-    mount(MainLayout,{
-      content:(<ResetPassword/>)
-    });
-  }
-});
+
 FlowRouter.route('/Email',{
   action(){
     mount(MainLayout,{
       content:(<Email/>)
+    });
+  }
+});
+FlowRouter.route('/ResetPassword/:token',{
+  action(params){
+    mount(MainLayout,{
+      content:(<ResetPassword token={params.token}/>)
+    });
+  }
+});
+
+FlowRouter.route('/:id',{
+  action(){
+    mount(layoutCuenta,{
+      content:(<Home/>)
     });
   }
 });
